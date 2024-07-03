@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 461914116}
   - component: {fileID: 461914115}
   - component: {fileID: 461914119}
+  - component: {fileID: 461914120}
   m_Layer: 0
   m_Name: Ben
   m_TagString: Untagged
@@ -458,6 +459,21 @@ MonoBehaviour:
     m_Bits: 1
   orientation: {fileID: 963194228}
   state: 0
+--- !u!114 &461914120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461914114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c52a308a964676488aaa9fbe5c32ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ilkGorev: []
+  ikinciGorev: []
+  ucuncuGorev: []
 --- !u!1 &511915846
 GameObject:
   m_ObjectHideFlags: 0

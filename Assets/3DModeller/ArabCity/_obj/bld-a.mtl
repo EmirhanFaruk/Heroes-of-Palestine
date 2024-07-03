@@ -1,0 +1,228 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 24.09.2010 22:01:08
+
+newmtl mtl_billboard_back
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\mtl_billboard_back.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\mtl_billboard_back.dds
+
+newmtl billboard_a
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\billboards-a.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\billboards-a.dds
+
+newmtl billboard_c
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\billboards-c.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\billboards-c.dds
+
+newmtl wd_brown
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\wd_brown_worn.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\wd_brown_worn.dds
+
+newmtl plstr_floor_dirt
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\plstr_floor_dirt.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\plstr_floor_dirt.dds
+
+newmtl bld_a_wall_outer
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588235 0.588235 0.588235
+	Kd 0.584314 0.584314 0.584314
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\bld_a-wall-outer.dds
+
+newmtl plstr_colored
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\wl_inner.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\wl_inner.dds
+
+newmtl wl_worn_heavy
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\wl_worn_heavy.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\wl_worn_heavy.dds
+
+newmtl mtl_blue
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\mtl_blue_dirt.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\mtl_blue_dirt.dds
+
+newmtl arab_windows
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\arab_windows.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\arab_windows.dds
+	map_d E:\Leadwerks Engine SDK\Chickenstreet\textures\arab_windows.dds
+
+newmtl air_con_old
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\aircon.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\aircon.dds
+
+newmtl fuse_box
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\fuse-box.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\fuse-box.dds
+
+newmtl mtl_pipes_edged
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\mtl_pipes.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\mtl_pipes.dds
+
+newmtl mtl_smallvents
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\ventilator_dif.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\ventilator_dif.dds
+
+newmtl dirt_grime_a
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588235 0.588235 0.588235
+	Kd 0.588235 0.588235 0.588235
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\DirtGrime_a.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\DirtGrime_a.dds
+	map_d E:\Leadwerks Engine SDK\Chickenstreet\textures\DirtGrime_a.dds
+
+newmtl dirt_grime_b
+	Ns 9.999999
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588235 0.588235 0.588235
+	Kd 0.588235 0.588235 0.588235
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\Leadwerks Engine SDK\Chickenstreet\textures\dirt_grime_b.dds
+	map_Kd E:\Leadwerks Engine SDK\Chickenstreet\textures\dirt_grime_b.dds
+	map_d E:\Leadwerks Engine SDK\Chickenstreet\textures\dirt_grime_b.dds

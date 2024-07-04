@@ -13,15 +13,16 @@ public class FotoSistemi : MonoBehaviour
 
     public LayerMask islenecekMaske;
 
-    public List<List<string>> uygulanacakTagler = new List<List<string>>();
+    public List<List<string>> uygulanacakIsimler = new List<List<string>>();
 
     [SerializeField]
     public List<string> ilkGorev = new List<string>();
     public List<string> ikinciGorev = new List<string>();
     public List<string> ucuncuGorev = new List<string>();
+    public List<string> test = new List<string>();
 
 
-    public int gorevNumarasi = 0;
+    public int gorevNumarasi = 3;
 
 
 
@@ -32,24 +33,26 @@ public class FotoSistemi : MonoBehaviour
     void Start()
     {
         // 3 gorev icin 3 tane "fotograf gereksinimi"
-        uygulanacakTagler.Add(ilkGorev);
-        uygulanacakTagler.Add (ikinciGorev);
-        uygulanacakTagler.Add(ucuncuGorev);
+        uygulanacakIsimler.Add(ilkGorev);
+        uygulanacakIsimler.Add (ikinciGorev);
+        uygulanacakIsimler.Add(ucuncuGorev);
+        uygulanacakIsimler.Add(test);
 
 
         // Ilk gorev: Cocuga su vermek.
-        uygulanacakTagler[0].Add("Cocuk");
-        uygulanacakTagler[0].Add("Su");
+        uygulanacakIsimler[0].Add("Cocuk");
 
 
         // Ikinci gorev: Bomba sonrasi enkaz.
-        uygulanacakTagler[1].Add("Enkaz");
+        uygulanacakIsimler[1].Add("Enkaz");
 
 
-        // Ucuncu gorev: Yardim edilen insanlar.
-        uygulanacakTagler[2].Add("Anne");
-        uygulanacakTagler[2].Add("Baba");
-        uygulanacakTagler[2].Add("Cocuk");
+        // Ucuncu gorev: Yardim edilen insan.
+        uygulanacakIsimler[2].Add("Kadin");
+
+        // test
+        uygulanacakIsimler[3].Add("Cocuk");
+        uygulanacakIsimler[3].Add("Kadin");
     }
 
 
@@ -70,16 +73,17 @@ public class FotoSistemi : MonoBehaviour
      * Isin istenen yere ulasti mi diye kontrol eder.
      * 
      */
-    bool IsinUlasti(Transform bas)
+    bool IsinUlasti(BoxCollider kutuCollider)
     {
-        if (bas != null)
+
+        if (kutuCollider != null)
         {
-            Ray isin = new Ray(kamera.transform.position, bas.position - kamera.transform.position);
+            Ray isin = new Ray(kamera.transform.position, kutuCollider.bounds.center - kamera.transform.position);
             RaycastHit sonuc;
 
             if (Physics.Raycast(isin, out sonuc))
             {
-                if (sonuc.transform == bas)
+                if (sonuc.collider == kutuCollider)
                 {
                     return true;
                 }
@@ -95,7 +99,7 @@ public class FotoSistemi : MonoBehaviour
      * Eger bir obje bu fonksiyonlardan gecerse true degerini gonderir.
      * 
      */
-    bool ObjeKontrol(string tag)
+    bool ObjeKontrol(string objeIsmi)
     {
         Vector3 kameraMerkezi = kamera.transform.position;
 
@@ -106,12 +110,13 @@ public class FotoSistemi : MonoBehaviour
         {
             GameObject obje = collider.gameObject;
 
-            if (obje.CompareTag(tag))
+            if (obje.name == objeIsmi)
             {
-                Transform objeninBasi = obje.transform.Find("mixamorig:Head");
+                BoxCollider kutuCollider = obje.GetComponent<BoxCollider>();
 
-                if (KareninIcinde(objeninBasi) && IsinUlasti(objeninBasi))
+                if (KareninIcinde(kutuCollider.transform) && IsinUlasti(kutuCollider))
                 {
+                    Debug.Log("Gorunen isim: " + objeIsmi);
                     return true;
                 }
             }
@@ -127,10 +132,11 @@ public class FotoSistemi : MonoBehaviour
      */
     bool GorevKontrol(int gorevNum)
     {
-        foreach (string tag in uygulanacakTagler[gorevNum])
+        foreach (string isim in uygulanacakIsimler[gorevNum])
         {
-            if (!ObjeKontrol(tag))
+            if (!ObjeKontrol(isim))
             {
+                Debug.Log("Bulunamayan isim: " + isim);
                 return false;
             }
         }
@@ -160,5 +166,9 @@ public class FotoSistemi : MonoBehaviour
             bool sonuc = FotoCek();
             Debug.Log(sonuc);
         }
+
+        bool deneme = FotoCek();
+
+        Debug.Log(deneme);
     }
 }

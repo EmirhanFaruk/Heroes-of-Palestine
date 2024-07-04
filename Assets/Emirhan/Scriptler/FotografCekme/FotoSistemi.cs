@@ -5,7 +5,7 @@ using UnityEngine;
 public class FotoSistemi : MonoBehaviour
 {
 
-    public Camera Kamera;
+    public Camera kamera;
 
     public float kameraYakinlikLimiti = 10.0f;
 
@@ -21,8 +21,14 @@ public class FotoSistemi : MonoBehaviour
     public List<string> ucuncuGorev = new List<string>();
 
 
+    public int gorevNumarasi = 0;
+
+
 
     // Start is called before the first frame update
+    /**
+     * Gorev taglerinin eklendigi yer.
+     */
     void Start()
     {
         // 3 gorev icin 3 tane "fotograf gereksinimi"
@@ -47,26 +53,83 @@ public class FotoSistemi : MonoBehaviour
     }
 
 
-    bool IsinUlasti(string tag)
+    /**
+     * Verilen obje ekranda mi diye kontrol eder.
+     * 
+     */
+    bool KareninIcinde(Transform obje)
     {
-        Vector3 kameraMerkezi = Kamera.transform.position;
+        Vector3 viewportPoint = kamera.WorldToViewportPoint(obje.position);
+        return viewportPoint.x >= 0 && viewportPoint.x <= 1 &&
+               viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
+               viewportPoint.z > 0;
+    }
+
+
+    /**
+     * Isin istenen yere ulasti mi diye kontrol eder.
+     * 
+     */
+    bool IsinUlasti(Transform bas)
+    {
+        if (bas != null)
+        {
+            Ray isin = new Ray(kamera.transform.position, bas.position - kamera.transform.position);
+            RaycastHit sonuc;
+
+            if (Physics.Raycast(isin, out sonuc))
+            {
+                if (sonuc.transform == bas)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+    /**
+     * Verilen tag'e gore objeleri KareninIcinde ve IsinUlasti fonksiyonundan gecirir.
+     * Eger bir obje bu fonksiyonlardan gecerse true degerini gonderir.
+     * 
+     */
+    bool ObjeKontrol(string tag)
+    {
+        Vector3 kameraMerkezi = kamera.transform.position;
 
         Collider[] colliderlar = Physics.OverlapSphere(kameraMerkezi, kameraYakinlikLimiti, islenecekMaske);
 
 
-        foreach (Collider obje in colliderlar)
+        foreach (Collider collider in colliderlar)
         {
-            // TODO: Handle this lmao
+            GameObject obje = collider.gameObject;
+
+            if (obje.CompareTag(tag))
+            {
+                Transform objeninBasi = obje.transform.Find("Bas");
+
+                if (KareninIcinde(objeninBasi) && IsinUlasti(objeninBasi))
+                {
+                    return true;
+                }
+            }
         }
 
-        return true;
+        return false;
     }
 
+
+    /**
+     * Verilen gorev numarasina gore cekilen fotografta istenenler var mi diye kontrol eder.
+     * 
+     */
     bool GorevKontrol(int gorevNum)
     {
         foreach (string tag in uygulanacakTagler[gorevNum])
         {
-            if (!IsinUlasti(tag))
+            if (!ObjeKontrol(tag))
             {
                 return false;
             }
@@ -77,7 +140,14 @@ public class FotoSistemi : MonoBehaviour
     }
 
 
-
+    /**
+     * Fotograf cekme fonksiyonu.
+     * 
+     */
+    bool FotoCek()
+    {
+        return GorevKontrol(gorevNumarasi);
+    }
 
 
 
@@ -85,6 +155,10 @@ public class FotoSistemi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            bool sonuc = FotoCek();
+            Debug.Log(sonuc);
+        }
     }
 }

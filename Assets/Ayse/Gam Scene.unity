@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 00baac4ab17f5f1439e8a281b06808cd, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.17054796, g: 0.16543396, b: 0.16007486, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5297,7 +5297,7 @@ Transform:
   m_GameObject: {fileID: 555733708}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5207915, y: 0.4783056, z: 0.4783056, w: 0.5207915}
-  m_LocalPosition: {x: -24.11, y: 0.97, z: -47.82}
+  m_LocalPosition: {x: -24.11, y: 0.01, z: -47.82}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5833,7 +5833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 293587295219780436, guid: e3eb53a18d877994e8b055a85a8a62d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.549973
+      value: -36.9
       objectReference: {fileID: 0}
     - target: {fileID: 293587295219780436, guid: e3eb53a18d877994e8b055a85a8a62d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11172,7 +11172,7 @@ Transform:
   m_GameObject: {fileID: 1012793687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 703.7, y: 2.54, z: 650.12}
+  m_LocalPosition: {x: 733.46, y: 2.54, z: 630}
   m_LocalScale: {x: 0.5, y: 1.8, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14647,6 +14647,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 35e8be2e31cf11641922b3ee5a70bc52, type: 3}
   m_PrefabInstance: {fileID: 1433477891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1435617351
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 732.746
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 628.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
+      propertyPath: m_Name
+      value: NEXIA DONE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4cbe487135fbf847828b39d773a034b, type: 3}
 --- !u!1001 &1439792567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16495,7 +16564,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.822998
+      value: 20.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16503,7 +16572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.528748
+      value: 33.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20947,3 +21016,4 @@ SceneRoots:
   - {fileID: 1360629774}
   - {fileID: 1836025440}
   - {fileID: 1717610347}
+  - {fileID: 1435617351}

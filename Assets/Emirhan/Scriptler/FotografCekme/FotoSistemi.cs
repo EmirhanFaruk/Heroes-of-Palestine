@@ -7,7 +7,7 @@ public class FotoSistemi : MonoBehaviour
 
     public Camera kamera;
 
-    public float kameraYakinlikLimiti = 10.0f;
+    public float kameraYakinlikLimiti = 8.5f;
 
 
 
@@ -19,10 +19,9 @@ public class FotoSistemi : MonoBehaviour
     public List<string> ilkGorev = new List<string>();
     public List<string> ikinciGorev = new List<string>();
     public List<string> ucuncuGorev = new List<string>();
-    public List<string> test = new List<string>();
 
 
-    public int gorevNumarasi = 3;
+    public int gorevNumarasi = 0;
 
 
 
@@ -49,10 +48,6 @@ public class FotoSistemi : MonoBehaviour
 
         // Ucuncu gorev: Yardim edilen insan.
         uygulanacakIsimler[2].Add("Kadin");
-
-        // test
-        uygulanacakIsimler[3].Add("Cocuk");
-        uygulanacakIsimler[3].Add("Kadin");
     }
 
 
@@ -116,7 +111,6 @@ public class FotoSistemi : MonoBehaviour
 
                 if (KareninIcinde(kutuCollider.transform) && IsinUlasti(kutuCollider))
                 {
-                    Debug.Log("Gorunen isim: " + objeIsmi);
                     return true;
                 }
             }
@@ -136,7 +130,6 @@ public class FotoSistemi : MonoBehaviour
         {
             if (!ObjeKontrol(isim))
             {
-                Debug.Log("Bulunamayan isim: " + isim);
                 return false;
             }
         }
@@ -152,23 +145,11 @@ public class FotoSistemi : MonoBehaviour
      */
     bool FotoCek()
     {
-        return GorevKontrol(gorevNumarasi);
-    }
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
+        bool sonuc = GorevKontrol(gorevNumarasi);
+        if (sonuc)
         {
-            bool sonuc = FotoCek();
-            Debug.Log(sonuc);
+            gorevNumarasi++;
         }
-
-        bool deneme = FotoCek();
-
-        Debug.Log(deneme);
+        return sonuc;
     }
 }

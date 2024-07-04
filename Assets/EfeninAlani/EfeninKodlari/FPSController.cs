@@ -64,7 +64,6 @@ public class FPSController : MonoBehaviour
                 rb.drag = 0;
             }
         }
-        Debug.Log(moveSpeed);
 
     }
 
@@ -91,7 +90,7 @@ public class FPSController : MonoBehaviour
     {
         Vector3 flatWell = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
-        //Gerekliyse hýzý limitle.
+        //Gerekliyse h?z? limitle.
         if(flatWell.magnitude > moveSpeed)
         {
             Vector3 limitedWell = flatWell.normalized * moveSpeed;

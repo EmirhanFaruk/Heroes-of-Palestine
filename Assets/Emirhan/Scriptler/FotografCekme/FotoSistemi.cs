@@ -108,7 +108,7 @@ public class FotoSistemi : MonoBehaviour
 
             if (obje.CompareTag(tag))
             {
-                Transform objeninBasi = obje.transform.Find("Bas");
+                Transform objeninBasi = obje.transform.Find("mixamorig:Head");
 
                 if (KareninIcinde(objeninBasi) && IsinUlasti(objeninBasi))
                 {

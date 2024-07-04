@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c52a308a964676488aaa9fbe5c32ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kamera: {fileID: 0}
+  kamera: {fileID: 9004417291906567627}
   kameraYakinlikLimiti: 10
   islenecekMaske:
     serializedVersion: 2
@@ -158,6 +158,7 @@ MonoBehaviour:
   ilkGorev: []
   ikinciGorev: []
   ucuncuGorev: []
+  gorevNumarasi: 0
 --- !u!1 &5519827222341924436
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +170,7 @@ GameObject:
   - component: {fileID: 4998860603634693718}
   - component: {fileID: 9169303914199739121}
   - component: {fileID: 771883520142030206}
+  - component: {fileID: 9021799264451807802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -251,6 +253,27 @@ MonoBehaviour:
     m_Bits: 1
   orientation: {fileID: 1304300429843278252}
   state: 0
+--- !u!114 &9021799264451807802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519827222341924436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c52a308a964676488aaa9fbe5c32ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kamera: {fileID: 9004417291906567627}
+  kameraYakinlikLimiti: 10
+  islenecekMaske:
+    serializedVersion: 2
+    m_Bits: 0
+  ilkGorev: []
+  ikinciGorev: []
+  ucuncuGorev: []
+  gorevNumarasi: 0
 --- !u!1 &5944209595641152894
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 842138251020752727}
   - component: {fileID: 495205748166080587}
   - component: {fileID: 7129988834274659063}
-  - component: {fileID: 8920019266349580433}
   - component: {fileID: 4906262547142625101}
-  - component: {fileID: 6984230314594943027}
   m_Layer: 0
   m_Name: Ben
   m_TagString: Untagged
@@ -86,29 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8920019266349580433
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4321026459626438558}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4906262547142625101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +91,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4321026459626438558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20651c40ca0706c459a83b4e0be0246b, type: 3}
   m_Name: 
@@ -137,27 +112,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   orientation: {fileID: 7293472466624103515}
+  rb: {fileID: 0}
   state: 0
---- !u!114 &6984230314594943027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4321026459626438558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c52a308a964676488aaa9fbe5c32ae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Kamera: {fileID: 0}
-  kameraYakinlikLimiti: 10
-  islenecekMaske:
-    serializedVersion: 2
-    m_Bits: 0
-  ilkGorev: []
-  ikinciGorev: []
-  ucuncuGorev: []
 --- !u!1 &5519827222341924436
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,8 +123,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4998860603634693718}
-  - component: {fileID: 9169303914199739121}
+  - component: {fileID: 7580218045825260732}
+  - component: {fileID: 4038765640037393908}
   - component: {fileID: 771883520142030206}
+  - component: {fileID: 9021799264451807802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -195,7 +153,30 @@ Transform:
   - {fileID: 3896854024992915819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &9169303914199739121
+--- !u!136 &7580218045825260732
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519827222341924436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4038765640037393908
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,9 +200,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 112
-  m_CollisionDetection: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &771883520142030206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +231,29 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   orientation: {fileID: 1304300429843278252}
+  rb: {fileID: 0}
   state: 0
+--- !u!114 &9021799264451807802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519827222341924436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c52a308a964676488aaa9fbe5c32ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kamera: {fileID: 9004417291906567627}
+  kameraYakinlikLimiti: 10
+  islenecekMaske:
+    serializedVersion: 2
+    m_Bits: 0
+  ilkGorev: []
+  ikinciGorev: []
+  ucuncuGorev: []
+  gorevNumarasi: 0
 --- !u!1 &5944209595641152894
 GameObject:
   m_ObjectHideFlags: 0

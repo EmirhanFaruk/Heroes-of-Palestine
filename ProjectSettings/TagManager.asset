@@ -7,6 +7,9 @@ TagManager:
   - Box
   - tas
   - kizCocugu
+  - cocuk
+  - yolSonu
+  - SaglikKutulari
   layers:
   - Default
   - TransparentFX

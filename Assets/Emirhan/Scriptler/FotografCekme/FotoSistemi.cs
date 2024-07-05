@@ -35,7 +35,7 @@ public class FotoSistemi : MonoBehaviour
         uygulanacakIsimler.Add(ilkGorev);
         uygulanacakIsimler.Add (ikinciGorev);
         uygulanacakIsimler.Add(ucuncuGorev);
-        uygulanacakIsimler.Add(test);
+        
 
 
         // Ilk gorev: Cocuga su vermek.

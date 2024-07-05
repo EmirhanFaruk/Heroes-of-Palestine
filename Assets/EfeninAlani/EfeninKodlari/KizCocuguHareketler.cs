@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KizCocuguHareketler : MonoBehaviour
@@ -46,6 +47,10 @@ public class KizCocuguHareketler : MonoBehaviour
             }
         }
         // Hedeflere ulaşıldığında hareketi durdur
+        if(currentTarget != null && currentTargetIndex >= 2)
+        {
+            cocuk.transform.rotation = Quaternion.Euler(0, -90, 0);
+        }
         if (currentTarget == null || currentTargetIndex >= 3)
         {
             hareket = false;

@@ -46,6 +46,15 @@ public class KizCocuguHareketler : MonoBehaviour
                 currentTargetIndex++;
             }
         }
+        if (currentTarget != null)
+        {
+            switch(currentTargetIndex)
+            {
+                case 1: cocuk.transform.rotation = Quaternion.Euler(0, 0, 0); break;
+                case 2: cocuk.transform.rotation = Quaternion.Euler(0, -90, 0); break;
+                case 3: hareket = false; break;
+            }
+        }
         // Hedeflere ulaþýldýðýnda hareketi durdur
         if(currentTarget != null && currentTargetIndex >= 2)
         {
@@ -78,7 +87,7 @@ public class KizCocuguHareketler : MonoBehaviour
         if (other.CompareTag("kizCocugu"))
         {
             hareket = true;
-            sayac = 5f; // Örneðin, sayac'ý 5 saniye olarak ayarlayabilirsiniz (ihtiyaçlarýnýza göre ayarlayýn)
+            sayac = 1f; // Örneðin, sayac'ý 5 saniye olarak ayarlayabilirsiniz (ihtiyaçlarýnýza göre ayarlayýn)
             currentTargetIndex = 0; // Hedef dizinini sýfýrla
         }
     }

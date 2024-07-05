@@ -12939,15 +12939,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 791.8
+      value: 756.3
       objectReference: {fileID: 0}
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0149999
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 607.48
+      value: 642.22
       objectReference: {fileID: 0}
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18172,7 +18172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f152cc373261fb44972d77331bbd907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasTransform: {fileID: 1622125427}
+  tasTransform: {fileID: 1763724308}
   tasHedefi: {fileID: 1461638046}
 --- !u!1 &1271218584
 GameObject:
@@ -19960,7 +19960,7 @@ Transform:
   m_GameObject: {fileID: 1461638045}
   serializedVersion: 2
   m_LocalRotation: {x: -0.17216265, y: -0.12854324, z: -0.022665653, w: 0.97638255}
-  m_LocalPosition: {x: -1.5109787, y: -0.49300003, z: -1.4229774}
+  m_LocalPosition: {x: -1.48, y: -0.169, z: -1.537}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21292,11 +21292,6 @@ Transform:
 --- !u!1 &1622125426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8959432611649786234, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
-  m_PrefabInstance: {fileID: 1654892901}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1622125427 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2979347220365864029, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
   m_PrefabInstance: {fileID: 1654892901}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &1622125430
@@ -23037,9 +23032,10 @@ GameObject:
   - component: {fileID: 1763724308}
   - component: {fileID: 1763724310}
   - component: {fileID: 1763724309}
+  - component: {fileID: 1763724311}
   m_Layer: 0
   m_Name: Retopo_Cube.119_cell.002 (1)
-  m_TagString: Untagged
+  m_TagString: tas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23109,6 +23105,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763724307}
   m_Mesh: {fileID: 686882852677951477, guid: fdadf288edba67e4a8f8042196d40bab, type: 3}
+--- !u!65 &1763724311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763724307}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0065233675, y: 0.004752569, z: 0.0236319}
+  m_Center: {x: 0.0000000012805684, y: 0.0000004816102, z: 0.0017840643}
 --- !u!1001 &1765119550
 PrefabInstance:
   m_ObjectHideFlags: 0

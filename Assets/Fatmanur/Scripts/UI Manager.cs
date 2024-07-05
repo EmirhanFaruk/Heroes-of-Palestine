@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public string sceneName;
     public void LoadScene() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(sceneName);
     }
     // Start is called before the first frame update
     public void ExitGame(){

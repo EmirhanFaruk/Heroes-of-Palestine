@@ -12939,7 +12939,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 756.3
+      value: 787.92
       objectReference: {fileID: 0}
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12947,7 +12947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 642.22
+      value: 608.75
       objectReference: {fileID: 0}
     - target: {fileID: 4998860603634693718, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13001,6 +13001,10 @@ PrefabInstance:
       propertyPath: t3
       value: 
       objectReference: {fileID: 1156338240}
+    - target: {fileID: 7297398006941143914, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
+      propertyPath: cocuk
+      value: 
+      objectReference: {fileID: 1453844337}
     - target: {fileID: 7297398006941143914, guid: e9ef6989810571c48aad09d09d24d5fd, type: 3}
       propertyPath: sayac
       value: 5

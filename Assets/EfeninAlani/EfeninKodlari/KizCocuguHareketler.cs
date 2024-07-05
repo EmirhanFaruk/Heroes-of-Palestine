@@ -11,18 +11,23 @@ public class KizCocuguHareketler : MonoBehaviour
     public float threshold = 0.1f; // Pozisyonlarýn eþit olup olmadýðýný kontrol etmek için eþik deðeri
     private int currentTargetIndex = 0; // Þu anki hedefi takip eden indeks
     public float sayac;
+    public GameObject cocuk;
 
     private void Update()
     {
         if (hareket)
         {
-            
             sayac -= Time.deltaTime;
-            if(sayac < 0)
+            if (sayac < 0)
             {
                 AnimasyonHareket();
                 animatorum.SetBool("komut", true);
+                cocuk.GetComponent<CapsuleCollider>().enabled = false;
             }
+        }
+        else
+        {
+            animatorum.SetBool("komut", false);
         }
     }
 
@@ -39,6 +44,11 @@ public class KizCocuguHareketler : MonoBehaviour
             {
                 currentTargetIndex++;
             }
+        }
+        // Hedeflere ulaþýldýðýnda hareketi durdur
+        if (currentTarget == null || currentTargetIndex >= 3)
+        {
+            hareket = false;
         }
     }
 
@@ -63,14 +73,8 @@ public class KizCocuguHareketler : MonoBehaviour
         if (other.CompareTag("kizCocugu"))
         {
             hareket = true;
-            
-            if (sayac < 0)
-            {
-                
-                
-            }
+            sayac = 5f; // Örneðin, sayac'ý 5 saniye olarak ayarlayabilirsiniz (ihtiyaçlarýnýza göre ayarlayýn)
             currentTargetIndex = 0; // Hedef dizinini sýfýrla
-
         }
     }
 }

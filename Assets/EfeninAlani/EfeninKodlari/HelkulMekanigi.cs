@@ -12,7 +12,7 @@ public class HelkulMekanigi : MonoBehaviour
         RaycastHit temas;
         if(Physics.Raycast(isin, out temas, 5f))
         {
-            if(temas.collider.gameObject.name == "Retopo_Cube.119_cell.003")
+            if(temas.collider.gameObject.name == "Retopo_Cube.119_cell.002 (1)" && Input.GetMouseButton(0))
             {
                 gecis += Time.deltaTime;
                 float Razor = gecis / 5;

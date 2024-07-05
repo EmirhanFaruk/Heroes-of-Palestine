@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 4038765640037393908}
   - component: {fileID: 771883520142030206}
   - component: {fileID: 9021799264451807802}
+  - component: {fileID: 7297398006941143914}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -254,6 +255,24 @@ MonoBehaviour:
   ikinciGorev: []
   ucuncuGorev: []
   gorevNumarasi: 0
+--- !u!114 &7297398006941143914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519827222341924436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e09ca0b6f351f4eb008da86461c704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorum: {fileID: 0}
+  t1: {fileID: 0}
+  t2: {fileID: 0}
+  t3: {fileID: 0}
+  t4: {fileID: 0}
+  hareketZamani: 0
 --- !u!1 &5944209595641152894
 GameObject:
   m_ObjectHideFlags: 0

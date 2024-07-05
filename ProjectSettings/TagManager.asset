@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Box
+  - tas
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Kameralik
   - Water
   - UI
   - MiknatisHedefi

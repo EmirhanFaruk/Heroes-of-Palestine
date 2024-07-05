@@ -21,7 +21,8 @@ public class DriveCar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) {
+        if (Input.GetKeyDown(KeyCode.F) && Vector3.Distance(transform.position, player.transform.position) < 10.0f) 
+        {
             if (!isDriving)
             {
                 player.transform.SetParent(driverSeat);
@@ -30,14 +31,16 @@ public class DriveCar : MonoBehaviour
                 isDriving = true;
                 Kamera.enabled = true;
             }
-            else {
+            else 
+            {
                 player.transform.SetParent(null);
                 player.SetActive(true); 
                 isDriving = false;
                 Kamera.enabled = false;
             }
         }
-        if (isDriving) {
+        if (isDriving) 
+        {
             float move = Input.GetAxis("Vertical") * Time.deltaTime * 10.0f;
             float turn = Input.GetAxis("Horizontal") * Time.deltaTime * 50.0f;
 

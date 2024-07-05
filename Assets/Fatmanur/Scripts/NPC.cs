@@ -1,41 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 public class NPC : MonoBehaviour
 {
     public Dialog dialog;
-    public DialogManager dialogManager;
-    public GameObject interactionButton;
-    public float interactionDistance = 3f;
-    private GameObject player;
+    private DialogManager dialogManager;
+    public GameObject interactionButton; // Buton referansý
+    public float interactionDistance = 3f; // NPC'ye yaklaþma mesafesi
+    private Transform player; // Oyuncu referansý
+
     void Start()
     {
-        interactionButton.SetActive(false);
-        player = GameObject.FindGameObjectWithTag("Player");
+        // Oyuncuyu tag ile buluyoruz
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        // DialogManager'ý buluyoruz
         dialogManager = FindObjectOfType<DialogManager>();
     }
+
     void Update()
     {
-        if (player != null)
-        {
-            float distance = Vector3.Distance(player.transform.position, transform.position);
+        // Oyuncu ile NPC arasýndaki mesafeyi hesaplýyoruz
+        float distance = Vector3.Distance(player.position, transform.position);
 
-            if (distance <= interactionDistance)
-            {
-                interactionButton.SetActive(true); // Butonu göster
-            }
-            else
-            {
-                interactionButton.SetActive(false); // Butonu gizle
-            }
+        // Eðer mesafe belirlenen mesafeden küçükse butonu gösteriyoruz
+        if (distance < interactionDistance)
+        {
+            interactionButton.SetActive(true);
+        }
+        else
+        {
+            // Mesafe fazla ise butonu gizliyoruz
+            interactionButton.SetActive(false);
         }
     }
-    public void OnMouseDown()
+
+    public void OnInteractionButtonClicked()
     {
+        // Butona týklanýldýðýnda dialog baþlatýlýyor
         dialogManager.StartDialog(dialog);
     }
-   
 }

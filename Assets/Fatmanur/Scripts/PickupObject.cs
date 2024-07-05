@@ -1,32 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PickupObject : MonoBehaviour
 {
-    public Transform handPos;
-    public GameObject box = null;
+    public Transform oyuncuTransform;
+    public Camera Kamera;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && box == null)
+        Debug.DrawRay(oyuncuTransform.position, Kamera.transform.forward, Color.red);
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("Birinci if");
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 2.0f))
+            
+            if (Physics.Raycast(oyuncuTransform.position, Kamera.transform.forward, out hit, 10000.0f))
             {
+                Debug.Log("ikinci if");
+                Debug.Log(hit.collider.name);
+                // var a = hit.GetComponent<ScriptIsmi>();
                 if (hit.collider.gameObject.CompareTag("Box"))
                 {
-                    box = hit.collider.gameObject;
-                    box.transform.SetParent(handPos);
+                    Debug.Log("ucuncu if");
+                    GameObject box = hit.collider.gameObject;
+                    box.transform.SetParent(oyuncuTransform);
                     box.transform.localPosition = Vector3.zero;
                 }
             }
-        }
-        else if (box != null) // box deðiþkeni null deðilse
-        {
-            box.transform.SetParent(null);
-            box = null;
         }
     }
 }

@@ -7,7 +7,16 @@ public class DriveCar : MonoBehaviour
     public GameObject player;
     public Transform driverSeat;
     public bool isDriving = false;
+    public Camera Kamera;
    
+
+    void Start()
+    {
+        if (Kamera != null)
+        {
+            Kamera.enabled = false;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,11 +28,13 @@ public class DriveCar : MonoBehaviour
                 player.transform.localPosition = Vector3.zero;
                 player.SetActive(false);
                 isDriving = true;
+                Kamera.enabled = true;
             }
             else {
                 player.transform.SetParent(null);
                 player.SetActive(true); 
                 isDriving = false;
+                Kamera.enabled = false;
             }
         }
         if (isDriving) {

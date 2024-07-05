@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public string sceneName;
     public void LoadScene() {
+        // Sahneyi yukler.
         SceneManager.LoadScene(sceneName);
     }
     // Start is called before the first frame update

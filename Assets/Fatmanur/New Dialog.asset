@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - name: Oyuncu
-    sentence: MErhaa
+    sentence: "Merhaba k\xFC\xE7\xFCk k\u0131z, neden burada tek ba\u015F\u0131nas\u0131n?"
   - name: "K\xFC\xE7\xFCk K\u0131z"
-    sentence: dgdsdsh
+    sentence: "Merhaba bay\u0131m, \u015Fehrimin sokaklar\u0131nda duruyorum ben
+      de her \xE7ocuk gibi."
+  - name: Oyuncu
+    sentence: "Ah... Ben bi' foto\u011Fraf\xE7\u0131y\u0131m, iznin olursa duru\u015Funu
+      foto\u011Fraflamak isterim d\xFCnyaya ilham olmas\u0131 i\xE7in."
+  - name: "K\xFC\xE7\xFCk K\u0131z"
+    sentence: "Ger\xE7ekten mi? Oluur."
